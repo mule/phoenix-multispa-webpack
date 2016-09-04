@@ -1,0 +1,10 @@
+{
+  "repository": {},
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^1.13.2"
+  }
+  "scripts": {
+        "start": "webpack --watch-stdin --progress --color"
+        }
+}
