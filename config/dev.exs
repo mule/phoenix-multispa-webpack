@@ -36,7 +36,7 @@ config :phoenix, :stacktrace_depth, 20
 config :releaseSchedule_webpack, ReleaseScheduleWebpack.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "password",
   database: "releaseschedule_webpack_dev",
-  hostname: "localhost",
+  hostname: "milltorq-dev.cloudapp.net",
   pool_size: 10

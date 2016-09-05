@@ -29,5 +29,5 @@ config :phoenix, :generators,
   binary_id: false
 
 # configure ecto 2.0 repo
-config: :releaseSchedule_webpack, [ReleaseScheduleWebpack.Repo]
+config :releaseSchedule_webpack, ecto_repos: [ReleaseScheduleWebpack.Repo]
 
