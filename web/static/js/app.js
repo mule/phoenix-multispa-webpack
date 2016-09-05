@@ -19,4 +19,6 @@
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
+import "phoenix_html";
+import { Socket } from "phoenix";
 alert('webpack compiled me.');

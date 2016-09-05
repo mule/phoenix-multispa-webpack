@@ -1,13 +1,21 @@
 {
   "repository": {},
-  "dependencies": {},
+  "dependencies": {
+    "phoenix": "file:deps/phoenix",
+    "phoenix_html": "file:deps/phoenix_html"
+  },
   "devDependencies": {
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
+    "copy-webpack-plugin": "^3.0.1",
+    "css-loader": "^0.24.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
   },
   "scripts": {
-    "start": "webpack --watch-stdin --progress --color"
+      "start": "webpack --watch-stdin --progress --color",
+      "compile": "webpack -p"
   }
 }
