@@ -1,4 +1,4 @@
 import "jquery";
-import "tether";
+global.Tether = require('tether');
 import "bootstrap";
 import "../css/bootstrap.css";
