@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <title>Hello ReleaseScheduleWebpack!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/js/css/app.css") %>">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/js/css/reactApp.css") %>">
   </head>
 
   <body>
@@ -34,6 +34,6 @@
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/reactApp.bundle.js") %>"></script>
   </body>
 </html>
