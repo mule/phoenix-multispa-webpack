@@ -1,14 +1,17 @@
 module Main exposing (..)
-
 import Html.App as Html
-import Update exposing (init, update, subscriptions)
-import View exposing (view)
-
-
+import App.Update as Update exposing (Model, Msg)
+import App.View as View
+main : Program Never
 main =
-  Html.programWithFlags
-    { init = init
-    , update = update
-    , view = view
-    , subscriptions = subscriptions
-    }
+    Html.program
+        { init = Update.init
+        , update = Update.update
+        , view = View.view
+        , subscriptions = subscriptions
+        }
+
+subscriptions : Model -> Sub Msg
+subscriptions model =
+    Sub.none
+                
