@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%= render ReleaseScheduleWebpack.SharedView, "head.html", %{ conn: @conn, title: "Release schedule - Elm", css_scripts: ["/js/css/elmApp.css"] }  %>
+    <%= render ReleaseScheduleWebpack.SharedView, "head.html", %{ conn: @conn, title: "Release schedule - Elm", css_scripts: ["/js/css/common.css"] }  %>
     <body>
         <nav class="navbar navbar-dark navbar-fixed-top bg-inverse" role="navigation">
             <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,6 +24,6 @@
             </main>
 
         </div> <!-- /container -->
-        <script src="<%= static_path(@conn, "/js/elmApp.bundle.js") %>"></script>
+    <%= render ReleaseScheduleWebpack.SharedView, "js_scripts.html", %{ conn: @conn, js_scripts: ["/js/common.bundle.js", "/js/elmApp.bundle.js"] }  %>
     </body>
 </html>

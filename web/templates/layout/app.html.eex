@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Hello ReleaseScheduleWebpack!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/js/css/app.css") %>">
-  </head>
-
+    <%= render ReleaseScheduleWebpack.SharedView, "head.html", %{ conn: @conn, title: "Release schedule - Main", css_scripts: ["/js/css/common.css"] }  %>
   <body>
       <nav class="navbar navbar-dark navbar-fixed-top bg-inverse" role="navigation">
         <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,6 +24,6 @@
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <%= render ReleaseScheduleWebpack.SharedView, "js_scripts.html", %{ conn: @conn, js_scripts: ["/js/common.bundle.js", "/js/main.bundle.js"] }  %>
   </body>
 </html>

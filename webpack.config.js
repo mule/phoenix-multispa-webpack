@@ -3,12 +3,12 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var CopyWebpackPlugin = require("copy-webpack-plugin");
 
 var elmSource = __dirname + '/web/static/elm';
-console.log(elmSource);
 module.exports = {
   entry: {
     main: "./web/static/js/app.js",
     elmApp: "./web/static/js/elmApp.js",
-    reactApp: "./web/static/js/reactApp.js"
+    reactApp: "./web/static/js/reactApp.js",
+    common: "./web/static/js/common.js"
   },
   output: {
     path: "./priv/static/js",
@@ -42,19 +42,20 @@ module.exports = {
     }, {
       test: /\.elm$/,
       exclude: [/elm-stuff/, /node_modules/],
-      loader: 'elm-webpack?pathToMake=../../../node_modules/.bin/elm-make&cwd=' + elmSource
+      loader: 'elm-webpack?pathToMake=../../../node_modules/.bin/elm-make&cwd=' +
+        elmSource
     }]
   },
   plugins: [
     new ExtractTextPlugin("css/[name].css"),
     new CopyWebpackPlugin([{
-      from: "./web/static/assets"
+      from: "./web/static/assets",
     }]),
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery",
-      "window.Tether": 'tether'
-    })
-  ]
+      'window.Tether': 'tether',
+    }),
+  ],
 };
