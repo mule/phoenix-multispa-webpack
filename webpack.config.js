@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     main: "./web/static/js/app.js",
     elmApp: "./web/static/js/elmApp.js",
-    reactApp: "./web/static/js/reactApp.js",
+    reactApp: "./web/static/js/reactApp.jsx",
     common: "./web/static/js/common.js"
   },
   output: {
@@ -16,16 +16,16 @@ module.exports = {
   },
   resolve: {
     modulesDirectories: ["node_modules", __dirname + "/web/static/js"],
-    extensions: ['', '.js', '.elm']
+    extensions: ['', '.js', '.elm','.jsx'],
   },
   devtool: 'source-map',
   module: {
     loaders: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       loader: "babel",
       query: {
-        presets: ["es2015"]
+          presets: ["es2015",'react'],
       }
     }, {
       test: /\.css$/,
